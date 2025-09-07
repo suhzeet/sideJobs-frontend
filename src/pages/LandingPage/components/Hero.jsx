@@ -76,7 +76,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-row flex-nowrap gap-4 sm:gap-6 md:gap-8 max-w-full mx-auto overflow-x-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -84,15 +84,15 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-                className="flex-shrink-0 flex flex-col items-center space-y-1 sm:space-y-2 p-2 sm:p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                className="flex flex-col items-center space-y-2 p-4 rounded-xl hover:bg-gray-50 transition-colors"
               >
-                <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-1 sm:mb-2">
-                  <stat.icon className="w-5 h-5 sm:w-7 sm:h-7 text-blue-600" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-2">
+                  <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600" />
                 </div>
-                <div className="text-xl sm:text-3xl font-bold text-gray-900">
+                <div className="text-2xl sm:text-3xl font-bold text-gray-900">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-base text-gray-600 font-medium">
+                <div className="text-sm sm:text-base text-gray-600 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
