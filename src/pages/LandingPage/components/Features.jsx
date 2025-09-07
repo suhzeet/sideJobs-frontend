@@ -24,7 +24,10 @@ const Features = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-white relative overflow-hidden">
+    <section
+      ref={ref}
+      className="py-18 sm:py-20 bg-white relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <motion.div

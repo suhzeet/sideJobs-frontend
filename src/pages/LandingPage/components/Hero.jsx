@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className=" pt-18 sm:pt-24 pb-16 bg-white min-h-screen flex items-center relative">
+    <section className=" pt-16 sm:pt-24 pb-12 sm:pb-16 bg-white min-h-screen flex items-center relative">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
