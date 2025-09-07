@@ -1,4 +1,5 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
+// export const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
 
 export const API_PATHS = {
   AUTH: {
@@ -14,7 +15,7 @@ export const API_PATHS = {
   },
 
   JOBS: {
-    GET_ALL_JOBS: '/api/jobs',
+    GET_ALL_JOBS: "/api/jobs",
     GET_JOB_By_ID: (id) => `/api/jobs/${id}`,
     POST_JOB: "/api/jobs",
     GET_JOBS_EMPLOYER: "/api/jobs/get-jobs-employer",
@@ -22,11 +23,10 @@ export const API_PATHS = {
     UPDATE_JOB: (id) => `/api/jobs/${id}`,
     TOGGLE_CLOSE: (id) => `/api/jobs/${id}/toggle-close`,
     DELETE_JOB: (id) => `/api/jobs/${id}`,
-    DELETE_JOB: (id) => `/api/jobs/${id}`,
 
     SAVE_JOB: (id) => `/api/save-jobs/${id}`,
     UNSAVE_JOB: (id) => `/api/save-jobs/${id}`,
-    GET_SAVED_JOBS: 'api/save-jobs/my',
+    GET_SAVED_JOBS: "api/save-jobs/my",
   },
 
   APPLICATIONS: {
