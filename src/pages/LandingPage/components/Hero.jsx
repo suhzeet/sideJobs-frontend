@@ -76,7 +76,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto"
+            className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
