@@ -1,102 +1,160 @@
 import { Briefcase, Github, Linkedin, Twitter } from "lucide-react";
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
-const Footer = () => {
+export default function Footer() {
+  const footerRef = useRef(null);
+  const isInView = useInView(footerRef, { once: true, amount: 0.2 });
+
+  const staggerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer
+      className="py-12 bg-gray-900 text-gray-300 font-sans"
+      ref={footerRef}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-4 gap-8"
+          variants={staggerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">SideJobs</h3>
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-2 mb-4">
+              <h3
+                className="text-white font-semibold"
+                style={{ fontSize: "20px" }}
+              >
+                SideJobs
+              </h3>
             </div>
-            <p className="text-sm text-gray-400">
+            <p
+              className="text-gray-400"
+              style={{ fontSize: "16px", lineHeight: "1.6" }}
+            >
               Connecting professionals with opportunities worldwide. Your career
               success is our mission.
             </p>
-          </div>
+          </motion.div>
 
-          {/* For Job Seekers */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
+          {/* Job Seekers */}
+          <motion.div variants={itemVariants}>
+            <h3
+              className="text-white font-semibold mb-4"
+              style={{ fontSize: "20px" }}
+            >
               Job Seekers
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-white">
-                  Browse Jobs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Upload Resume
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Career Advice
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Help Center
-                </a>
-              </li>
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Browse Jobs",
+                "Upload Resume",
+                "Career Advice",
+                "Help Center",
+              ].map((item, i) => (
+                <motion.li
+                  key={i}
+                  whileHover={{ x: 3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    style={{ fontSize: "16px" }}
+                  >
+                    {item}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
-          {/* For Employers */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Employers</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-white">
-                  Post a Job
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Employer Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Recruitment Plans
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Support
-                </a>
-              </li>
+          {/* Employers */}
+          <motion.div variants={itemVariants}>
+            <h3
+              className="text-white font-semibold mb-4"
+              style={{ fontSize: "20px" }}
+            >
+              Employers
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Post a Job",
+                "Employer Dashboard",
+                "Recruitment Plans",
+                "Support",
+              ].map((item, i) => (
+                <motion.li
+                  key={i}
+                  whileHover={{ x: 3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    style={{ fontSize: "16px" }}
+                  >
+                    {item}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Social */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+          {/* Connect */}
+          <motion.div variants={itemVariants}>
+            <h3
+              className="text-white font-semibold mb-4"
+              style={{ fontSize: "20px" }}
+            >
+              Connect
+            </h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-white">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-blue-400">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-blue-500">
-                <Twitter className="w-5 h-5" />
-              </a>
+              {[
+                { icon: Github, href: "#" },
+                { icon: Linkedin, href: "#" },
+                { icon: Twitter, href: "#" },
+              ].map(({ icon: Icon, href }, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a
+                    href={href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Icon style={{ width: "22px", height: "22px" }} />
+                  </a>
+                </motion.div>
+              ))}
             </div>
-            <p className="mt-4 text-xs text-gray-500">
-              © {new Date().getFullYear()} SideJobs. All rights reserved.
-            </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Copyright */}
+        <motion.div
+          className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <p style={{ fontSize: "16px" }}>
+            &copy; {new Date().getFullYear()} SideJobs. All rights reserved.
+          </p>
+        </motion.div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
