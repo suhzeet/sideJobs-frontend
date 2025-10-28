@@ -41,7 +41,7 @@ const Features = () => {
             variants={itemVariants}
           >
             Tools That Help You
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block text-blue-600 bg-clip-text">
               Work Smarter
             </span>
           </motion.h2>
@@ -61,7 +61,7 @@ const Features = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Find Work Section */}
+          {/* Job Seeker Section */}
           <motion.div variants={itemVariants}>
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -76,8 +76,9 @@ const Features = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{
-                    y: -5,
-                    boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                    // y: -5,
+                    // boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                    scale: 1.02,
                   }}
                   className="group flex items-start space-x-4 px-6 py-4 rounded-2xl bg-white hover:bg-blue-50 transition-all duration-300 cursor-pointer"
                 >
@@ -97,13 +98,13 @@ const Features = () => {
             </div>
           </motion.div>
 
-          {/* Post Work Section */}
+          {/* Job Recruiter Section */}
           <motion.div variants={itemVariants}>
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Job Recruiter
               </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-600 mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
             </div>
 
             <div className="space-y-4">
@@ -112,13 +113,14 @@ const Features = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{
-                    y: -5,
-                    boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                    // y: -5,
+                    // boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                    scale: 1.02,
                   }}
-                  className="group flex items-start space-x-4 px-6 py-4 rounded-2xl bg-white hover:bg-purple-50 transition-all duration-300 cursor-pointer"
+                  className="group flex items-start space-x-4 px-6 py-4 rounded-2xl bg-white hover:bg-blue-50 transition-all duration-300 cursor-pointer"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-                    <feature.icon className="w-6 h-6 text-purple-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">

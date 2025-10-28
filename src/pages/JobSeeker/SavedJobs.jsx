@@ -1,9 +1,4 @@
-import {
-  ArrowLeft,
-  Bookmark,
-  Grid,
-  List,
-} from "lucide-react";
+import { ArrowLeft, Bookmark, Grid, List } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
@@ -15,7 +10,7 @@ import toast from "react-hot-toast";
 
 const SavedJobs = () => {
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [savedJobList, setSavedJobList] = useState([]);
   const [viewMode, setViewMode] = useState("grid");
@@ -45,9 +40,9 @@ const SavedJobs = () => {
       getSavedJobs();
     }
   }, [user]);
-  
+
   return (
-     <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="bg-blue-50">
       <Navbar />
 
       <div className="container mx-auto pt-24">
@@ -140,7 +135,7 @@ const SavedJobs = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SavedJobs
+export default SavedJobs;

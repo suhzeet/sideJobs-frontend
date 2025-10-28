@@ -87,17 +87,14 @@ const UserProfile = () => {
     setSaving(true);
 
     try {
-      const response = await axiosInstance.post(
-        API_PATHS.AUTH.DELETE_RESUME,
-        {
-          resumeUrl: user.resume || "",
-        }
-      );
+      const response = await axiosInstance.post(API_PATHS.AUTH.DELETE_RESUME, {
+        resumeUrl: user.resume || "",
+      });
 
       if (response.status === 200) {
         toast.success("Resume Deleted Successfully!!");
-        setProfileData({ ...formData, resume:'' });
-        updateUser({ ...formData, resume:'' });
+        setProfileData({ ...formData, resume: "" });
+        updateUser({ ...formData, resume: "" });
       }
     } catch (error) {
       console.error("Profile update failed:", error);
@@ -119,7 +116,7 @@ const UserProfile = () => {
   }, [user]);
 
   return (
-     <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="bg-blue-50">
       <Navbar />
 
       <div className="min-h-screen bg-gray-50 py-8 px-4 mt-16 lg:m-20">
@@ -222,14 +219,13 @@ const UserProfile = () => {
                     </label>
                   </div>
                 )}
-                
               </div>
 
               {/* Action Buttons */}
               <div className="flex justify-end space-x-4 mt-8 pt-6 border-t">
                 <Link
                   onClick={handleCancel}
-                  to='/find-jobs'
+                  to="/find-jobs"
                   className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2"
                 >
                   <X className="w-4 h-4" />
@@ -253,7 +249,7 @@ const UserProfile = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default UserProfile
+export default UserProfile;

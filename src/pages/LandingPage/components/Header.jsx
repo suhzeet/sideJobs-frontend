@@ -24,9 +24,7 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/70 backdrop-blur-md shadow-sm"
-          : "bg-white border-b border-gray-100"
+        scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-white "
       }`}
     >
       <div className="container mx-auto px-4">
@@ -39,10 +37,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <motion.div
-              className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"
-              whileHover={{ rotate: 20 }}
-            >
+            <motion.div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
               <Briefcase className="w-5 h-5 text-white" />
             </motion.div>
             <span className="text-xl md:text-2xl font-bold text-gray-900">
@@ -59,13 +54,13 @@ const Header = () => {
           >
             <a
               onClick={() => navigate("/find-jobs")}
-              className="text-gray-600 hover:text-purple-700 font-medium text-base md:text-lg cursor-pointer transition-colors"
+              className="text-gray-600 hover:text-blue-700 font-medium text-base md:text-lg cursor-pointer transition-colors"
             >
               Browse Jobs
             </a>
             <a
               onClick={() => navigate(isAuthenticated ? "/post-job" : "/login")}
-              className="text-gray-600 hover:text-purple-700 font-medium text-base md:text-lg cursor-pointer transition-colors"
+              className="text-gray-600 hover:text-blue-700 font-medium text-base md:text-lg cursor-pointer transition-colors"
             >
               Post a Job
             </a>
@@ -85,7 +80,7 @@ const Header = () => {
                 </span>
                 <a
                   href="/dashboard"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium text-sm md:text-base hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium text-sm md:text-base hover:bg-blue-700 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   Dashboard
                 </a>
@@ -100,7 +95,7 @@ const Header = () => {
                 </a>
                 <a
                   href="/signup"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium text-sm md:text-base hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium text-sm md:text-base hover:bg-blue-700 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   Sign Up
                 </a>
@@ -139,7 +134,7 @@ const Header = () => {
                 navigate("/find-jobs");
                 setIsMenuOpen(false);
               }}
-              className="text-gray-600 hover:text-purple-700 font-medium text-base py-2 cursor-pointer"
+              className="text-gray-600 hover:text-blue-700 font-medium text-base py-2 cursor-pointer"
             >
               Browse Jobs
             </a>
@@ -148,7 +143,7 @@ const Header = () => {
                 navigate(isAuthenticated ? "/post-job" : "/login");
                 setIsMenuOpen(false);
               }}
-              className="text-gray-600 hover:text-purple-700 font-medium text-base py-2 cursor-pointer"
+              className="text-gray-600 hover:text-blue-700 font-medium text-base py-2 cursor-pointer"
             >
               Post a Job
             </a>
@@ -158,7 +153,7 @@ const Header = () => {
                   navigate("/dashboard");
                   setIsMenuOpen(false);
                 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 w-full text-white px-4 py-2 rounded-md text-sm md:text-base mt-2"
+                className="bg-blue-600 w-full text-white px-4 py-2 rounded-md text-sm md:text-base mt-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -169,7 +164,7 @@ const Header = () => {
                 <a
                   href="/login"
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-600 hover:text-purple-700 font-medium text-base py-2 cursor-pointer"
+                  className="text-gray-600 hover:text-blue-700 font-medium text-base py-2 cursor-pointer"
                 >
                   Login
                 </a>
@@ -178,7 +173,7 @@ const Header = () => {
                     navigate("/signup");
                     setIsMenuOpen(false);
                   }}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 w-full text-white px-4 py-2 rounded-md text-sm md:text-base mt-2"
+                  className="bg-blue-600 w-full text-white px-4 py-2 rounded-md text-sm md:text-base mt-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

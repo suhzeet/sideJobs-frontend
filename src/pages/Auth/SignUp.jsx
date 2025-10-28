@@ -185,7 +185,7 @@ const SignUp = () => {
             Account Created!
           </h2>
           <p className="text-gray-600 mb-4">
-            Welcome to JobPortal! Your account has been successfully created.
+            Welcome to SideJobs! Your account has been successfully created.
           </p>
           <div className="animate-spin w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full mx-auto" />
           <p className="text-sm text-gray-500 mt-2">
@@ -412,7 +412,7 @@ const SignUp = () => {
           <button
             type="submit"
             disabled={formState.loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {formState.loading ? (
               <>

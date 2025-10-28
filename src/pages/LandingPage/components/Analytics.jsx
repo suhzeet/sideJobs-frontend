@@ -6,7 +6,7 @@ const Analytics = () => {
     {
       icon: Users,
       title: "Active Users",
-      value: "2.4M+",
+      value: "45+",
       growth: "+15%",
       bgColor: "bg-blue-100",
       iconColor: "text-blue-600",
@@ -14,7 +14,7 @@ const Analytics = () => {
     {
       icon: Briefcase,
       title: "Jobs Posted",
-      value: "150K+",
+      value: "32+",
       growth: "+22%",
       bgColor: "bg-purple-100",
       iconColor: "text-purple-600",
@@ -22,7 +22,7 @@ const Analytics = () => {
     {
       icon: Target,
       title: "Successful Hires",
-      value: "89K+",
+      value: "26+",
       growth: "+18%",
       bgColor: "bg-green-100",
       iconColor: "text-green-600",
@@ -50,9 +50,7 @@ const Analytics = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Platform{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Analytics
-            </span>
+            <span className="text-blue-600 bg-clip-text ">Analytics</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real-time insights and data-driven results that showcase the power
@@ -67,7 +65,7 @@ const Analytics = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
               className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
             >
