@@ -79,7 +79,7 @@ const Header = () => {
                   Hi, {user?.fullName}
                 </span>
                 <a
-                  href="/dashboard"
+                  href="/employer-dashboard"
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium text-sm md:text-base hover:bg-blue-700 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   Dashboard

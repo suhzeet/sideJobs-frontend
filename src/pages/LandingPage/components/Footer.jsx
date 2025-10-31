@@ -33,7 +33,7 @@ export default function Footer() {
           <motion.div variants={itemVariants}>
             <div className="flex items-center space-x-2 mb-4">
               <h3
-                className="text-white font-semibold"
+                className="text-gray-50 font-bold"
                 style={{ fontSize: "20px" }}
               >
                 SideJobs
@@ -41,7 +41,11 @@ export default function Footer() {
             </div>
             <p
               className="text-gray-400"
-              style={{ fontSize: "16px", lineHeight: "1.6" }}
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.6",
+                letterSpacing: "0.25px",
+              }}
             >
               Connecting professionals with opportunities worldwide. Your career
               success is our mission.
@@ -51,7 +55,7 @@ export default function Footer() {
           {/* Job Seekers */}
           <motion.div variants={itemVariants}>
             <h3
-              className="text-white font-semibold mb-4"
+              className="text-gray-50 font-bold mb-4"
               style={{ fontSize: "20px" }}
             >
               Job Seekers
@@ -71,7 +75,7 @@ export default function Footer() {
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
-                    style={{ fontSize: "16px" }}
+                    style={{ fontSize: "16px", letterSpacing: "0.25px" }}
                   >
                     {item}
                   </a>
@@ -83,7 +87,7 @@ export default function Footer() {
           {/* Employers */}
           <motion.div variants={itemVariants}>
             <h3
-              className="text-white font-semibold mb-4"
+              className="text-gray-50 font-bold mb-4"
               style={{ fontSize: "20px" }}
             >
               Employers
@@ -103,7 +107,7 @@ export default function Footer() {
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors"
-                    style={{ fontSize: "16px" }}
+                    style={{ fontSize: "16px", letterSpacing: "0.25px" }}
                   >
                     {item}
                   </a>
@@ -113,9 +117,9 @@ export default function Footer() {
           </motion.div>
 
           {/* Connect */}
-          <motion.div variants={itemVariants}>
+          <motion.div va riants={itemVariants}>
             <h3
-              className="text-white font-semibold mb-4"
+              className="text-gray-50 font-bold mb-4"
               style={{ fontSize: "20px" }}
             >
               Connect
